@@ -3,17 +3,20 @@ import PropTypes from 'prop-types';
 
 const ItemHistory = ({ method, url, id }) => {
   return (
-    <spn>
-
-    </spn>
+    <article id={id}>
+      <div id={id}>{method}</div>
+      <div id={id}>{url}</div>
+    </article>
 
   );
 };
-ItemHistory.propTypes = {
 
+ItemHistory.propTypes = {
+  method: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
 };
 
 export default ItemHistory;
 
 
-  
