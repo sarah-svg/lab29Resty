@@ -9,8 +9,7 @@ export const fetchApi = (url, method, body) => {
     })
       .then(res => res.json());
   }
-  
+
   return fetch(url)
     .then(res => res.json());
 };
-  

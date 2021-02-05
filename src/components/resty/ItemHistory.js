@@ -1,22 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ItemHistory = ({ method, url, id }) => {
+const HistoryItem = ({ method, url, id }) => {
   return (
     <article id={id}>
-      <div id={id}>{method}</div>
-      <div id={id}>{url}</div>
+      <p id={id}>{method}</p>
+      <span id={id}>{url}</span>
     </article>
-
   );
 };
 
-ItemHistory.propTypes = {
+HistoryItem.propTypes = {
   method: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired
 };
 
-export default ItemHistory;
-
-
+export default HistoryItem;

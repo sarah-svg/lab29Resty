@@ -1,0 +1,12 @@
+.Display{
+  background-color: white;
+  height: 19.7vw;
+  width: 44vw;
+  margin-top: 10px;
+  margin-right: .3vw;
+  margin-bottom: .3vw;
+  margin-left: 3vw;
+  border: 6px outset lightblue;
+  overflow: auto;
+  padding: 3em;
+}
