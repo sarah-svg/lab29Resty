@@ -2,7 +2,7 @@ import React from 'react';
 import { render, cleanup } from '@testing-library/react';
 import HistoryItem from './ItemHistory';
 
-describe('Iten History', () => {
+describe('Item History', () => {
   afterEach(() => cleanup());
   it('renders HistoryItem', () => {
     const { asFragment } = render(<HistoryItem
