@@ -1,0 +1,13 @@
+.Header{
+  background: #73cada;
+  color: black;
+  height: 4em;
+  line-height: 4em;
+  padding: 0 2em;
+  font-family: Verdana,Geneva,Tahoma,sans-serif;
+
+  h1{
+    font-size: 4em;
+    font-weight: 400;
+  }
+}
