@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HistoryItem component renders HistoryItem 1`] = `
+<DocumentFragment>
+  <article
+    id="1"
+  >
+    <p
+      id="1"
+    >
+      GET
+    </p>
+    <span
+      id="1"
+    >
+      www.google.com
+    </span>
+  </article>
+</DocumentFragment>
+`;
+
+exports[`Iten History renders HistoryItem 1`] = `
+<DocumentFragment>
+  <article
+    id="1"
+  >
+    <p
+      id="1"
+    >
+      GET
+    </p>
+    <span
+      id="1"
+    >
+      www.google.com
+    </span>
+  </article>
+</DocumentFragment>
+`;
+
+exports[`renders HistoryItem 1`] = `
+<DocumentFragment>
+  <article
+    id="1"
+  >
+    <p
+      id="1"
+    >
+      GET
+    </p>
+    <span
+      id="1"
+    >
+      www.google.com
+    </span>
+  </article>
+</DocumentFragment>
+`;
