@@ -18,3 +18,22 @@ exports[`Item History renders HistoryItem 1`] = `
   </article>
 </DocumentFragment>
 `;
+
+exports[`Item History renders HistoryItem 2`] = `
+<DocumentFragment>
+  <article
+    id="1"
+  >
+    <p
+      id="1"
+    >
+      GET
+    </p>
+    <span
+      id="1"
+    >
+      www.google.com
+    </span>
+  </article>
+</DocumentFragment>
+`;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactJson from 'react-json-view';
 import styles from './Display.css';
-
+// data-testid="display" 
 const Display = ({ displayJSON }) => {
   return (
     <pre className={styles.Display}>
