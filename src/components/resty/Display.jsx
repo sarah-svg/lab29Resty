@@ -7,7 +7,6 @@ const Display = ({ displayJSON }) => {
   return (
     <pre className={styles.Display}>
       <ReactJson src={displayJSON}  />
-      
     </pre>
   );
 };
