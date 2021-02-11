@@ -1,19 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactJson from 'react-json-view';
 import styles from './Display.css';
 
-const Display = ({ displayJSON }) => {
+import ReactJson from 'react-json-view';
+
+const Display = ({ display }) => {
   return (
-    <pre className={styles.Display}>
-      <ReactJson src={displayJSON}  />
+    <pre data-testid="display" className={styles.Display}>
+      <ReactJson src={display} displayDataTypes={false} />
     </pre>
   );
 };
 
 Display.propTypes = {
-  displayJSON: PropTypes.oneOfType([PropTypes.object, PropTypes.array])
-    .isRequired
+  display: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired
+
 };
 
 export default Display;

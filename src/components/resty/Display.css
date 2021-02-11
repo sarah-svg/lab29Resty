@@ -1,12 +1,13 @@
 .Display{
-  background-color: white;
-  height: 19.7vw;
-  width: 44vw;
-  margin-top: 10px;
-  margin-right: .3vw;
-  margin-bottom: .3vw;
-  margin-left: 3vw;
-  border: 6px outset lightblue;
-  overflow: auto;
-  padding: 3em;
-}
+    background-color: rgb(168, 245, 228);
+    height: 500px;
+    width: 800px;
+    margin-top: 20px;
+    margin-right: 20%;
+    margin-left: 2.23%;
+    margin-bottom: .5vw;
+    border: 9px dotted teal;
+    border-radius: 2%;
+    overflow: auto;
+    padding: 2em;
+  }

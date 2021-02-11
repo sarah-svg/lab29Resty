@@ -1,7 +1,7 @@
 export const fetchApi = (url, method, body) => {
   if(method !== 'GET'){
     return fetch(url, {
-      method,
+      method, 
       headers: {
         'Content-Type': 'application/json'
       },
@@ -10,6 +10,6 @@ export const fetchApi = (url, method, body) => {
       .then(res => res.json());
   }
 
-  return fetch(url)
+  return fetch (url)
     .then(res => res.json());
 };

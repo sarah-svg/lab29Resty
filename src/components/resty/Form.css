@@ -1,56 +1,70 @@
 .Form{
-  margin-right: 2.3vw;
-  width: 51.9vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 3.5vw;
-
-  section{
+    margin-right: .3vw;
+    width: 81.9vw;
     display: flex;
-    width: 100%;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
-
-    input[type="radio"]{
-      visibility: hidden;
-      height: 0;
-      width: 0;
-      margin-left: 0;
+  
+    div{
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+  
+      input[type="radio"]{
+        
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        margin-left: 0; 
+        background-color: teal;
+      }
+    
+      label{
+        color: rgb(18, 173, 148);
+        padding: 4px 16px;
+        cursor: pointer;
+      }
+  
+      input[type="radio"]:checked+label {
+        background-color: rgb(60, 209, 209);
+        color: rgb(38, 132, 187);
+        
+      }
+      
+    
     }
   
-    label{
-      padding: 4px 16px;
-      cursor: pointer;
+    input{
+      
+      margin-bottom: 8px;
+      align-items: center;
+     
     }
-
-    input[type="radio"]:checked+label{
-      background-color: #73cada;
-      color: white;
+  
+    button{
+      margin-left: 3vw;
+      background-color: teal;
+    }
+  
+    textarea{
+      background-color:aquamarine;
+      margin-top: 5px;
+      margin-left: -15%;
+      width: 80%;
+      height: 6vw;
+      align-self: center;
     }
   }
-
-  input{
-    margin-bottom: 10px;
+  
+  .url{
+    
+    background-color: rgb(48, 184, 165);
+    width: 80%;
+    height: 25px;
+    font-size: 12px;
+    margin-right: 15%;
+    margin-top: 5px;
   }
-
-  button{
-    margin-left: 2vw;
-  }
-
-  textarea{
-    margin-top: 8px;
-    width: 100%;
-    height: 6vw;
-    align-self: flex-end;
-  }
-}
-
-.url{
-  width: 100%;
-  height: 25px;
-  font-size: 18px;
-  margin-top: 5px;
-}
