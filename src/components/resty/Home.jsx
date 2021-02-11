@@ -5,10 +5,13 @@ const Header = () => {
   return (
     <header className={styles.Header}>
       <h1>
-          Home Page
+                Resty a POSTMAN app!
       </h1>
     </header>
   );
 };
 
+
+
 export default Header;
+

@@ -1,39 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Resty renders HistoryItem 1`] = `
+exports[`Resty container creates a snapshot test of the character containor 1`] = `
 <DocumentFragment>
   <header
     class="Header"
   >
     <h1>
-      Home Page
+      Resty a POSTMAN app!
     </h1>
   </header>
-  <section
+  <div
     class="Resty"
   >
     <ul
       class="History"
-    />
-    <div>
-      <section>
+    >
+      <li>
+        <section
+          id="https://jsonplaceholder.typicode.com/todos/1+GET"
+        >
+          <p
+            id="https://jsonplaceholder.typicode.com/todos/1+GET"
+          >
+            https://jsonplaceholder.typicode.com/todos/1
+          </p>
+          <p
+            id="https://jsonplaceholder.typicode.com/todos/1+GET"
+          >
+            GET
+          </p>
+        </section>
+      </li>
+    </ul>
+    <section>
+      <div>
         <form
           class="Form"
         >
           <input
             class="url"
             name="url"
-            placeholder="URL"
+            placeholder="Place URL here..."
             type="text"
             value=""
           />
-          <section>
-            <div>
+          <div>
+            <section
+              class="bouncy"
+            >
               <input
-                alue="GET"
                 id="get"
                 name="method"
                 type="radio"
+                value="GET"
               />
               <label
                 for="get"
@@ -84,19 +103,20 @@ exports[`Resty renders HistoryItem 1`] = `
               >
                 DELETE
               </label>
-            </div>
+            </section>
             <button>
-              Go!
+              Resty
             </button>
-          </section>
+          </div>
           <textarea
             name="body"
-            placeholder="Raw JSON Body"
+            placeholder="JSON in the raw"
           />
         </form>
-      </section>
+      </div>
       <pre
         class="Display"
+        data-testid="display"
       >
         <div
           class="react-json-view"
@@ -227,7 +247,7 @@ exports[`Resty renders HistoryItem 1`] = `
                           <span
                             style="display: inline-block;"
                           >
-                            Hello
+                            Hey
                           </span>
                           <span
                             style="vertical-align: top;"
@@ -249,16 +269,10 @@ exports[`Resty renders HistoryItem 1`] = `
                           style="display: inline-block; color: rgb(203, 75, 22);"
                         >
                           <span
-                            class="data-type-label"
-                            style="font-size: 11px; margin-right: 4px; opacity: 0.8;"
-                          >
-                            string
-                          </span>
-                          <span
                             class="string-value"
                             style="cursor: default;"
                           >
-                            "make a post, change with put or patch, grab with get and delete by id"
+                            "Make a Post, Put, Delete, or Get with the Resty app!"
                           </span>
                         </div>
                       </div>
@@ -305,7 +319,7 @@ exports[`Resty renders HistoryItem 1`] = `
           </div>
         </div>
       </pre>
-    </div>
-  </section>
+    </section>
+  </div>
 </DocumentFragment>
 `;

@@ -1,13 +1,19 @@
-.Home{
-  background: #73cada;
-  color: black;
-  height: 4em;
-  line-height: 4em;
-  padding: 0 2em;
-  font-family: Verdana,Geneva,Tahoma,sans-serif;
+.Header{
 
-  h1{
-    font-size: 4em;
-    font-weight: 400;
+    color: rgb(29, 161, 139);
+    height: 9em;
+    line-height: 4em;
+    padding: 0 2em;
+    font-family: 'Fantsay', serif;
+    margin-bottom: 2rem;
+  
+   
+    h1{
+      -webkit-text-stroke: 2px black;
+
+      font-size: 4em;
+      font-weight: 500;
+    }
   }
-}
+
+  

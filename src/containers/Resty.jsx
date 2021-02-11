@@ -1,99 +1,104 @@
-/* eslint-disable max-len */
 import React, { Component } from 'react';
 import Header from '../components/resty/Home';
 import Form from '../components/resty/Form';
 import { fetchApi } from '../services/fetchApi';
 import Display from '../components/resty/Display';
-import HistoryList from '../components/resty/ListHistory';
+import HistoryList from '../components/resty/HistoryList';
 import styles from './Resty.css';
 
-export default class Resty extends Component{
-  state ={
-    url: '',
-    method: '',
-    body: '',
-    history: [],
-    displayJSON: { 'Hello':'make a post, change with put or patch, grab with get and delete by id' }
-  }
 
-  componentDidMount(){
-    const historyStored = JSON.parse(localStorage.getItem('history'));
-    
-    if(historyStored){
-      this.setState({ history: historyStored });
+export default class Resty extends Component {
+    state ={
+      url: '',
+      method: '',
+      body: '',
+      history: [],
+      // eslint-disable-next-line max-len
+      display: { 'Hey':'Make a Post, Put, Delete, or Get with the Resty app!' }
     }
-  }
 
-  handleChange = ({ target }) => {
-    this.setState({ [target.name]: target.value });
-  }
+    componentDidMount(){
+      const storeHistory = JSON.parse(localStorage.getItem('history'));
 
-  handleSubmit = event => {
-    const { history, url, method } = this.state;
-    const key = `${url}+${method}`;
-    
-    event.preventDefault();
-    this.fetch();
-    
-    if(history.filter(item => item.key === key)
-      .length > 0 || method === '') return;
-    this.setState(state => ({
-      history: [...state.history, {
-        url: state.url,
-        method: state.method,
-        body: state.body,
-        key: `${state.url}+${state.method}`
-      }]
-    }));
-
-    this.setState(state => {
-      localStorage.setItem('history', JSON.stringify(state.history));
-    });
-  }
-
-  handleClick = event => {
-    const { id } = event.target;
-    let result;
-
-    this.state.history.forEach(item => {
-      if(item.key === id){
-        result = item;
+      if(storeHistory){
+        this.setState({ history: storeHistory });
       }
-    });
+    }
 
-    this.setState({
-      url: result.url,
-      method: result.method,
-      body: result.body
-    });
-  }
+    handleChange = ({ target }) => {
+      this.setState({ [target.name]: target.value });
+    }
 
-  fetch = () => {
-    const { url, method, body } = this.state;
-    return fetchApi(url, method, body)
-      .then(res => this.setState({ displayJSON: res }));  
-  }
+    handleSubmit = event => {
+      const { url, method, history } = this.state;
+      const key = `${url}+${method}`;
 
-  render(){
-    const { url, method, body, displayJSON, history } = this.state;
+      event.preventDefault();
+      this.fetch();
 
-    return (
-      <>
-        <Header/>
-        <section className={styles.Resty}>
-          <HistoryList history={history} onClick={this.handleClick} />
-          <div>
-            <Form 
-              url={url} 
-              method={method} 
-              body={body} 
-              onSubmit={this.handleSubmit} 
-              onChange={this.handleChange} />
-            <Display displayJSON={displayJSON} />
+      if(history.filter
+      (item => item.key === key).length > 0 || method === '') return;
+      this.setState(state => ({
+        history: [...state.history, {
+          url: state.url, 
+          method: state.method,  
+          body: state.body,
+          key: `${state.url}+${state.method}`
+        }]
+      }));
+
+      this.setState(state => {
+        localStorage.setItem('history', JSON.stringify(state.history));
+      });
+    }
+
+    handleClick = event => {
+      const { id } = event.target;
+      let result;
+
+      this.state.history.forEach(item => {
+        if(item.key === id){
+          result = item;
+        }
+      });
+
+      this.setState({
+        url: result.url, 
+        method: result.method,
+        body: result.body
+      });
+    }
+
+    //to run test again
+
+    fetch = () => {
+      const { url, method, body } = this.state;
+      return fetchApi(url, method, body)
+        .then(res => this.setState({ display: res }));
+    }
+    render() {
+      const { url, method, body, history, display } = this.state;
+
+      return (
+
+        <>
+          <Header/>
+          <div className={styles.Resty}>
+            <HistoryList history={history} onClick={this.handleClick} />
+            <section>
+              <Form
+                url={url}
+                method={method}
+                body={body}
+                onSubmit={this.handleSubmit}
+                onChange={this.handleChange} />
+              <Display display={display} />
+
+            </section>
+                
           </div>
-        </section>
-        
-      </>
-    );
-  }
+        </>
+      );
+    }
 }
+

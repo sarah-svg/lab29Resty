@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displays history of queries renders data from query history 1`] = `
+<DocumentFragment>
+  <section
+    id=""
+  >
+    <p
+      id=""
+    />
+    <p
+      id=""
+    />
+  </section>
+</DocumentFragment>
+`;

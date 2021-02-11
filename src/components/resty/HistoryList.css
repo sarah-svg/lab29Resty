@@ -1,0 +1,23 @@
+.History{
+    width: 500px;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+  
+    li{
+      background-color: teal;
+      color: red;
+      width: 17vw;
+      font-size: 13.5px;
+      margin: 8px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 5px dotted black;
+      text-overflow: clip;
+  
+      p{
+        font-weight: bold;
+        margin-bottom: 1px;
+      }
+    }
+  }
