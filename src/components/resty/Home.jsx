@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header className={styles.Header}>
       <h1>
-                Resty a POSTMAN app!
+      Resty a POSTMAN app!
       </h1>
     </header>
   );

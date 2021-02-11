@@ -3,7 +3,7 @@ import Header from '../components/resty/Home';
 import Form from '../components/resty/Form';
 import { fetchApi } from '../services/fetchApi';
 import Display from '../components/resty/Display';
-import HistoryList from '../components/resty/HistoryList';
+import ListHistory from '../components/resty/ListHistory';
 import styles from './Resty.css';
 
 
@@ -80,11 +80,10 @@ export default class Resty extends Component {
       const { url, method, body, history, display } = this.state;
 
       return (
-
         <>
           <Header/>
           <div className={styles.Resty}>
-            <HistoryList history={history} onClick={this.handleClick} />
+            <ListHistory history={history} onClick={this.handleClick} />
             <section>
               <Form
                 url={url}
@@ -93,9 +92,7 @@ export default class Resty extends Component {
                 onSubmit={this.handleSubmit}
                 onChange={this.handleChange} />
               <Display display={display} />
-
             </section>
-                
           </div>
         </>
       );

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import History from './History';
-import styles from './HistoryList.css';
+import styles from './ListHistory.css';
 
-const HistoryList = ({ history, onClick }) => {
+const ListHistory = ({ history, onClick }) => {
   const historyElements = history.map((item, i) => {
     return (
       <li key={`${item.method}+${item.url}`} onClick={onClick}>
@@ -19,7 +19,7 @@ const HistoryList = ({ history, onClick }) => {
   );
 };
 
-HistoryList.propTypes = {
+ListHistory.propTypes = {
   history: PropTypes.arrayOf(PropTypes.shape({
     url: PropTypes.string.isRequired,
     method: PropTypes.string.isRequired,
@@ -28,5 +28,5 @@ HistoryList.propTypes = {
 
 };
 
-export default HistoryList;
+export default ListHistory;
 
