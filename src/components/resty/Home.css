@@ -1,18 +1,31 @@
 .Header{
 
-    color: rgb(29, 161, 139);
+    color: rgb(131, 241, 225);
     height: 8em;
     line-height: 4em;
     padding: 0 2em;
-    font-family: 'Fantsay', serif;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 43px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    font-weight: 700;
+    text-decoration: none solid rgb(0, 0, 0);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: none;
     margin-bottom: 2rem;
-  
+    text-shadow: 12px 2px 18px rgba(77,66,0,0.5), 
+      15px 2px 30px rgba(64,77,0,0.5), 17px 2px 45px rgba(0, 0, 0, 0.5),
+       2px 2px 2px rgba(35,206,204,0), 0px 2px 8px rgba(98, 235, 232, 0.27), 
+       0px 2px 8px rgba(15,202,206,0.27), 0px 2px 8px rgba(17,206,178,0.27), 
+       0px -3px 13px rgba(17,206,178,0.27), 0px -3px 0px rgba(17,206,178,0.27),
+        0px -3px 0px rgba(89,215,226,0.27), 0px -3px 10px rgba(125, 236, 247, 0.27), 
+        0px -3px 10px rgba(89,215,226,0.27);
    
     h1{
-      -webkit-text-stroke: 2px black;
-
-      font-size: 4em;
-      font-weight: 500;
+      -webkit-text-stroke: 1px black;
+   
+      
     }
   }
 
