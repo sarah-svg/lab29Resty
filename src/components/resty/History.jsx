@@ -10,6 +10,7 @@ const History = ({ url, method, id }) => {
   );
 };
 
+
 History.propTypes = {
   url: PropTypes.string.isRequired,
   method: PropTypes.string.isRequired,
