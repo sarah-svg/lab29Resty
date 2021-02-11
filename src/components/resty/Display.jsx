@@ -18,4 +18,3 @@ Display.propTypes = {
 };
 
 export default Display;
-
