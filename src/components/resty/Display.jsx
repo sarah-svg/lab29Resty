@@ -8,7 +8,6 @@ const Display = ({ display }) => {
   return (
     <pre data-testid="display" className={styles.Display}>
       <ReactJson src={display} displayDataTypes={false} />
-    </pre>
   );
 };
 
