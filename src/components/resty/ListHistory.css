@@ -5,15 +5,16 @@
     flex-direction: column;
   
     li{
-      background-color: teal;
-      color: red;
+      background-color: rgb(51,221,255);
+      color: black;
       width: 17vw;
       font-size: 13.5px;
       margin: 8px;
       padding: 5px;
       border-radius: 5px;
-      border: 5px dotted black;
-      text-overflow: clip;
+      border: 2px dotted black;
+
+      /* text-overflow: clip; */
   
       p{
         font-weight: bold;
